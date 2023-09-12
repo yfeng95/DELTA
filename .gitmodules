@@ -1,0 +1,6 @@
+[submodule "process_data/body_video/submodules/face-parsing.PyTorch"]
+	path = process_data/body_video/submodules/face-parsing.PyTorch
+	url = https://github.com/zllrunning/face-parsing.PyTorch
+[submodule "process_data/body_video/submodules/MODNet"]
+	path = process_data/submodules/MODNet
+	url = https://github.com/ZHKKKe/MODNet

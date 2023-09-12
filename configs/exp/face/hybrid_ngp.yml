@@ -1,0 +1,67 @@
+project: 'DELTA'
+mixed_precision: True
+# exp_name: 'mesh'
+# training
+train:
+  batch_size: 1
+  max_steps: 3001
+  beta_lr: 1e-3
+  nerf_lr: 4e-3
+  mesh_geo_lr: 5e-4
+  mesh_color_lr: 4e-4
+  cam_lr: 1e-5
+  pose_lr: 5e-5
+  exp_lr: 1e-4
+  light_lr: 5e-5
+  val_steps: 500
+  
+# mesh config
+use_mesh: True
+mesh:
+  use_geo: True
+  geo_net: 'ngp'
+  geo_cond_type: None
+  geo_scale: 0.002
+  geo_in_dim: 3
+  geo_out_dim: 3 # 1 or 3, 1 for z, 3 for xyz
+  color_net: 'ngp'
+  color_cond_type: posed_verts
+  color_out_dim: 1 # 1 or 3, 1 for z, 3 for xyz
+  use_light: False
+
+# nerf config
+use_nerf: True
+nerf:
+  use_coarse_model: True
+  nerf_net: 'ngp'
+  nerf_cond: posed_verts #'neck_pose'
+  deform_cond: posed_verts
+  n_rays: 4096 # sample rays, to avoid OOM
+  n_rays_patch_size: 32
+  n_points: 32
+  n_coarse_points: 96
+  test_n_rays: 4096
+  render_normal: False #True
+# posemodel config
+use_posemodel: True
+# losses
+loss:
+  alpha_region: nonskin
+  w_rgb: 1.
+  w_rgb_nerf: 0.
+  w_alpha: 0.5
+  w_reg_correction: 1.
+  w_patch_perceptual: 0.01
+  # mesh
+  mesh_rgb_region: skin
+  mesh_alpha_region: skin
+  mesh_w_rgb: 1. #05§
+  mesh_w_rgb_skin: 0.001
+  mesh_w_alpha: 0.5
+  mesh_w_alpha_inside: 0. #1
+  mesh_w_mrf: 0.
+  mesh_w_perceptual: 0.015 #01 #005
+  # mesh reg
+  mesh_w_reg_offset: 400.
+  mesh_w_reg_edge: 400.
+  
