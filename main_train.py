@@ -107,21 +107,3 @@ if __name__ == '__main__':
     shutil.copy(args.exp_cfg, os.path.join(cfg.savedir, 'exp_config.yaml'))
     trainer = Trainer(config=cfg)
     trainer.fit()
-
-    ### after training, do visualization
-#     from lib.visualizer import Visualizer
-#     args.exp_name = cfg.exp_name
-#     args.image_size = cfg.image_size
-#     cfg.clean = False
-#     cfg.resume = True
-#     cfg.use_wandb = False
-#     cfg.dataset.white_bg = True
-#     if cfg.dataset.type == 'face_video':
-#         cfg.nerf.depth_std = 0.01
-#         cfg.nerf.dist_thresh = 0.008
-#     vis_list = ['capture', 'novel_view', 'extract_mesh', 'animate']
-#     visualizer = Visualizer(config=cfg)
-#     for vis_type in vis_list:
-#         args.visualize = vis_type
-#         visualizer.run(args.visualize, args=args)
-# ## 
