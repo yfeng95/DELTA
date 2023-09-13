@@ -51,12 +51,6 @@ if __name__ == '__main__':
     cfg.resume = True
     cfg.use_wandb = False
     cfg.dataset.white_bg = True
-    # if cfg.dataset.type == 'face_video':
-    #     cfg.nerf.depth_std = 0.01
-    # cfg.nerf.n_coarse_points = 128
-    # cfg.nerf.n_points = 64
-    # cfg.nerf.dist_thresh = 0.04
-    # cfg.nerf.depth_std = 0.05
     
     if args.visualize == 'all':
         vis_list = ['capture', 'novel_view', 'extract_mesh', 'animate', 'change_shape']
