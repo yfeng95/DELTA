@@ -78,7 +78,7 @@ python main_demo.py --expdir exps --exp_name  person_0004 --visualize novel_view
 ```bash
 python main_demo.py --expdir exps --exp_name  person_0004 --visualize extract_mesh --frame_id 0
 ```
-This will also save mesh objects taht you can open with Meshlab, here shows the examples, green is for extracted hair geometry. 
+This will also save mesh objects (body only and body with hair) that you can open with Meshlab, green is for extracted hair geometry. 
 <p align="center">
   <div align="center">
     <img src="Doc/exps/person_0004_mesh_speedup.gif" alt="change shape" width="25%">
