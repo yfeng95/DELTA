@@ -30,9 +30,10 @@ The key features:
 1. animate the avatar by changing body poses (including hand articulation and facial expressions),  
 2. synthesize novel views of the avatar, and  
 3. transfer hair/clothing between avatars for virtual try-on applications.  
-We have examples for reconstructing avatars for face/upper-body videos and full-body videos. 
-For full-body video, please check [SCARF](https://github.com/yfeng95/SCARF).
-<!-- For generating face avatar from text, please check TECA. -->
+
+We have examples for reconstructing avatars for face/upper-body videos and full-body videos.   
+For **full-body** video, please check [SCARF](https://github.com/yfeng95/SCARF).  
+For generating compositional avatar from **text**, please check [TECA](https://yfeng95.github.io/teca).
   
 We also provide code for data processing [here](./process_data/README.md), which includes **fitting face, neck and shoulder** to a single image or a monocular video. 
 
@@ -50,7 +51,7 @@ If you have problems when installing [pytorch3d](https://github.com/facebookrese
 
 ### Download data 
 ```
-bash scripts/fetch_data.sh
+bash fetch_data.sh
 ```
 
 ## Play with trained avatars
