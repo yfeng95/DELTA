@@ -21,14 +21,16 @@ wget --post-data "username=$username&password=$password" 'https://download.is.tu
 cd ./data
 unzip utilities.zip
 rm utilities.zip
+cd ..
 
 # detla utilities
 echo -e "\nDownloading delta data..."
-wget https://nextcloud.tuebingen.mpg.de/index.php/s/zR3DM3zEdje984c/download -O ./data/delta_utilities.zip
+wget https://nextcloud.tuebingen.mpg.de/index.php/s/zR3DM3zEdje984c/download -O ./data/delta_utilities.zip 
 unzip ./data/delta_utilities.zip -d ./data
 mv ./data/delta_utilities/* ./data/
 rm ./data/delta_utilities.zip
 rm -rf ./data/delta_utilities
+rm -rf ./data/__MACOSX
 
 # # download two examples for visualization
 mkdir -p ./exps
